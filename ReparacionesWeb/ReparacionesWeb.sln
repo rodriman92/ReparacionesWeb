@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.572
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReparacionesWeb", "ReparacionesWeb\ReparacionesWeb.csproj", "{5BBD5043-E047-4B63-9687-77681EB02B17}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReparacionesWeb.Tests", "ReparacionesWeb.Tests\ReparacionesWeb.Tests.csproj", "{2ED86E37-9B6B-4295-B3D7-3AC9A41E8A3D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5BBD5043-E047-4B63-9687-77681EB02B17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5BBD5043-E047-4B63-9687-77681EB02B17}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5BBD5043-E047-4B63-9687-77681EB02B17}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5BBD5043-E047-4B63-9687-77681EB02B17}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2ED86E37-9B6B-4295-B3D7-3AC9A41E8A3D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2ED86E37-9B6B-4295-B3D7-3AC9A41E8A3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2ED86E37-9B6B-4295-B3D7-3AC9A41E8A3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2ED86E37-9B6B-4295-B3D7-3AC9A41E8A3D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {96C8AA06-C35D-44D9-A2CC-0A613DF250E4}
+	EndGlobalSection
+EndGlobal

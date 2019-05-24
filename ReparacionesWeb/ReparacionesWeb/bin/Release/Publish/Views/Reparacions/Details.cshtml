@@ -1,0 +1,82 @@
+﻿@model ReparacionesWeb.Models.Reparacion
+
+@{
+    ViewBag.Title = "Detalles";
+}
+
+<h1>Detalles Reparación</h1>
+
+<div>
+    
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Cliente.ApeNombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cliente.ApeNombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DetalleEquipo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DetalleEquipo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaRecepcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaRecepcion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Diagnostico)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Diagnostico)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Observaciones)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Observaciones)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CostoReparacion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CostoReparacion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EstadoReparacion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EstadoReparacion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaPago)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaPago)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.ReparacionID }) |
+    @Html.ActionLink("Regresar", "Index")
+</p>

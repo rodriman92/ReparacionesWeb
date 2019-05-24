@@ -1,0 +1,88 @@
+﻿@model ReparacionesWeb.Models.Reparacion
+
+@{
+    ViewBag.Title = "Borrar";
+}
+
+<h1>Borrar Reparación</h1>
+
+<h3>Está seguro que desea eliminar la reparación?</h3>
+<div>
+    <h4>Detalle</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Cliente.ApeNombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cliente.ApeNombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DetalleEquipo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DetalleEquipo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaRecepcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaRecepcion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Diagnostico)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Diagnostico)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Observaciones)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Observaciones)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CostoReparacion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CostoReparacion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EstadoReparacion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EstadoReparacion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaPago)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaPago)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+    <div class="form-actions no-color">
+        <input type="submit" value="Borrar" class="btn btn-default" /> |
+        @Html.ActionLink("Regresar", "Index")
+    </div>
+    }
+</div>

@@ -1,0 +1,119 @@
+﻿@model IEnumerable<ReparacionesWeb.Models.Reparacion>
+
+
+@{
+    ViewBag.Title = "Listado";
+}
+
+<h2>Listado de Reparaciones</h2>
+
+<p>
+    @Html.ActionLink("Crear", "Create", null, new { @class = "btn btn-primary btn-large" })
+</p>
+<table class="table table-sm table-dark">
+    <thead class="thead-dark">
+        <tr>
+            <th table table-sm table-dark>
+                @Html.DisplayNameFor(model => model.Cliente.ApeNombre)
+            </th>
+            <th table table-sm table-dark>
+                @Html.DisplayNameFor(model => model.DetalleEquipo)
+            </th>
+            <th table table-sm table-dark>
+                @Html.DisplayNameFor(model => model.FechaRecepcion)
+            </th>
+            <th table table-sm table-dark>
+                @Html.DisplayNameFor(model => model.Diagnostico)
+            </th>
+            <th table table-sm table-dark>
+                @Html.DisplayNameFor(model => model.Observaciones)
+            </th>
+            <th table table-sm table-dark>
+                @Html.DisplayNameFor(model => model.CostoReparacion)
+            </th>
+            <th table table-sm table-dark>
+                @Html.DisplayNameFor(model => model.EstadoReparacion)
+            </th>
+            <th table table-sm table-dark>
+                @Html.DisplayNameFor(model => model.FechaPago)
+            </th>
+            <th table table-sm table-dark>Acciones</th>
+        </tr>
+    </thead>
+
+
+    @foreach (var item in Model)
+    {
+
+    <tr>
+        @if (item.EstadoReparacion != 2)
+        {
+            <td>
+                @Html.DisplayFor(modelItem => item.Cliente.ApeNombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DetalleEquipo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FechaRecepcion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Diagnostico)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Observaciones)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CostoReparacion)
+            </td>
+
+            <td>
+               Pago
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FechaPago)
+            </td>
+
+        }
+        else
+        {
+            <td style="border: 4px dashed red">
+                @Html.DisplayFor(modelItem => item.Cliente.ApeNombre)
+            </td>
+            <td style="border: 4px dashed red">
+                @Html.DisplayFor(modelItem => item.DetalleEquipo)
+            </td>
+            <td style="border: 4px dashed red">
+                @Html.DisplayFor(modelItem => item.FechaRecepcion)
+            </td>
+            <td style="border: 4px dashed red">
+                @Html.DisplayFor(modelItem => item.Diagnostico)
+            </td>
+            <td style="border: 4px dashed red">
+                @Html.DisplayFor(modelItem => item.Observaciones)
+            </td>
+            <td style="border: 4px dashed red">
+                @Html.DisplayFor(modelItem => item.CostoReparacion)
+            </td>
+
+            <td style="border: 4px dashed red">
+               Debe
+            </td>
+            <td style="border: 4px dashed red">
+                @Html.DisplayFor(modelItem => item.FechaPago)
+            </td>
+           
+
+        }
+
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { id = item.ReparacionID }) |
+            @Html.ActionLink("Detalles", "Details", new { id = item.ReparacionID }) |
+            @Html.ActionLink("Borrar", "Delete", new { id = item.ReparacionID })
+        </td>
+
+    </tr>
+
+    }
+
+</table>
